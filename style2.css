@@ -1,0 +1,334 @@
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS Variables */
+:root {
+    --primary-color: rgb(233, 20, 109);
+    --primary-dark: rgb(185, 16, 87);
+    --white: #ffffff;
+    --black: #000000;
+    --light-gray: #f0f0f0;
+    --dark-gray: gray;
+} 
+
+/* Naviation */
+.navbar{
+    background-color: white;
+} 
+.nav-link{
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: white;
+    background-color: black;
+}
+.navbar-brand{
+    font-size:1.25rem;
+    font-weight: 800;
+    color:black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.main{
+    background: url("Site/Hi.png")no-repeat center center; 
+    background-size: cover;
+    width: 100%;
+    height: 95vh;
+}
+
+.main h3{
+    font-size: 4.4rem;
+    font-weight: 700;
+}
+.main h6{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1;
+    border-bottom: 3px solid var(--primary-color);
+    width: 40%;
+}
+.main .bt1{
+    height: 55px;
+    width: 138px;
+    background-color:  var(--primary-color) ;
+    color: var(--white); 
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.main .bt1:hover{
+    background-color: var(--primary-dark) ; 
+    transition: 0.5s;
+}
+.main .bt2{
+    height: 55px;
+    width: 138px;
+    background-color: transparent ;
+    color:  rgb(233, 20, 109);
+    outline: none;
+    border: 1px solid rgb(233, 30, 109);
+    font-weight: bold;
+    border-radius: 5px;
+}
+.main .bt2:hover{
+    background-color: rgb(233, 30, 109) ;
+    transition: 0.5s;
+    color: white;
+}
+/* ===== Typoraphy ===== */ 
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+/* ===== About Section Image ===== */
+.about img {
+    -webkit-box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
+}
+
+/* ===== Progress Bar Styles ===== */
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 25px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.pro-value1,
+.pro-value2,
+.pro-value3,
+.pro-value4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    height: 100%;
+    padding: 0 15px;
+    font-size: 14px;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+
+/* Width animations */
+@keyframes load1 {
+    0% { width: 0%; }
+    100% { width: 98%; }
+}
+@keyframes load2 {
+    0% { width: 0%; } 
+    100% { width: 82%; }
+}
+@keyframes load3 {
+    0% { width: 0%; }
+    100% { width: 65%; }
+}
+@keyframes load4 {
+    0% { width: 0%; }
+    100% { width: 70%; } 
+}
+
+.pro-value1 { animation-name: load1; width: 98%; }
+.pro-value2 { animation-name: load2; width: 82%; }
+.pro-value3 { animation-name: load3; width: 65%; }
+.pro-value4 { animation-name: load4; width: 70%; }
+
+
+.card { 
+    border: none;
+    outline: none;
+    -webkit-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+}
+
+.card p { 
+    color: gray;
+}
+
+.circle {
+    height: 70px;
+    width: 70px;
+    background-color: lightgray;
+    color: black;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.card:hover .circle {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.control ul li{
+    list-style: none;
+    background-color: black;
+    padding: 5px 15px;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.item{
+    position: relative;
+}
+.item:hover{
+    -webkit-box-shadow: -8px 6px 109px -65px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 6px 109px -65px rgba(0,0,0,0.75);
+    box-shadow: -8px 6px 109px -65px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+.item span{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+    opacity:0;
+}
+.item:hover span{
+    opacity: 1;
+    transition: 0.5s;
+}
+.item:before{
+    content: " " ;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100% ;
+    background-color: rgba(238, 235, 230, 0.479) ;
+    opacity: 0;
+    position: absolute;
+}
+.item:hover:before{
+    opacity: 1;
+    transition: 0.3s;
+}
+.control ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+.control ul li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 20px;
+    cursor: pointer;
+    background: #f0f0f0;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+
+  .control ul li.active,
+  .control ul li:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .item span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.4s;
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .item:hover span {
+    opacity: 1;
+  }
+
+  /* Porfolio Section */
+  .portfolio-modal .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+  }
+
+  #modal-image {
+    max-width: 100%;
+    max-height: 80vh; 
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  #modal-image[Src=" " ] {
+    display: none;
+  } 
+  .circle:hover{
+    background-color: #000;
+    transition: .4s;
+    color: white;
+  }
+  .contact .btn3{
+    background-color: #000;
+    color: white;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 4px;
+  }
+  .btn3:hover{
+    background:white;
+    color: black;
+    transition: .4s;
+    border: 1px solid black;
+  }
+
+  /* Mobile styles */
+@media (max-width: 768px) {
+    .main h3 {
+        font-size: 2.5rem;
+    }
+    
+    .main h6 {
+        width: 80%;
+    }
+    
+    .main {
+        height: auto;
+        min-height: 80vh;
+        padding: 50px 0;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 992px) {
+    .main h3 {
+        font-size: 3.5rem;
+    }
+}
